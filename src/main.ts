@@ -571,6 +571,12 @@ class SVG3DTagCloud {
 }
 
 export default SVG3DTagCloud;
+
+// @ts-ignore
+window.SVG3dTagCloud = SVG3DTagCloud;
+// @ts-ignore
+window.Svg3dTagCloud = SVG3DTagCloud;
+
 interface SVG3DTagCloudChild {
   element?: Element;
   link?: Element;

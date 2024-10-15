@@ -3,9 +3,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   build: {
     lib: {
-      entry: './lib/main.ts',
-      name: 'SVG3dTagCloud',
-      fileName: 'SVG3dTagCloud',
+      entry: './src/main.ts',
+      name: 'SVG3DTagCloud',
+      fileName: 'SVG3DTagCloud',
     },
   },
 });

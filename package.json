@@ -1,26 +1,27 @@
 {
   "name": "svg-3d-tag-cloud",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist",
     "index.d.ts"
   ],
-  "main": "./dist/SVG3dTagCloud.umd.cjs",
-  "module": "./dist/SVG3dTagCloud.js",
+  "main": "./dist/SVG3DTagCloud.umd.cjs",
+  "module": "./dist/SVG3DTagCloud.js",
   "types": "./index.d.ts",
   "exports": {
     "types": "./index.d.ts",
-    "import": "./dist/SVG3dTagCloud.js",
-    "require": "./dist/SVG3dTagCloud.umd.cjs"
+    "import": "./dist/SVG3DTagCloud.js",
+    "require": "./dist/SVG3DTagCloud.umd.cjs"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "publish": "npm version patch && npm publish"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "vite": "^5.2.10"
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
   }
 }
