@@ -3,6 +3,13 @@
   "private": false,
   "version": "0.0.13",
   "type": "module",
+  "keywords": [
+    "svg-3d-tag-cloud",
+    "3d-tag-cloud",
+    "tag-cloud",
+    "3d-tag",
+    "SVG3DTagCloud"
+  ],
   "files": [
     "dist",
     "index.d.ts"
@@ -20,7 +27,8 @@
     "build": "tsc && vite build",
     "patch-version": "npm version patch",
     "minor-version": "npm version minor",
-    "lib-publish": "npm run patch-version && npm publish"
+    "lib-publish": "npm run patch-version && npm publish",
+    "build_cp": "npm run build && sh ./scripts/cp.sh"
   },
   "devDependencies": {
     "typescript": "^5.6.3",
