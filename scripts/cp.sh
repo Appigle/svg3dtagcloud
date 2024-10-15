@@ -13,4 +13,6 @@ ls -lh ./dist
 echo "-- Commit changes"
 git add .
 git commit -am "Update dist files"
+echo "-- Push changes"
+git push
 echo "-- Done"
