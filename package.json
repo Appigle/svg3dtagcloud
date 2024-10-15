@@ -28,7 +28,8 @@
     "patch-version": "npm version patch",
     "minor-version": "npm version minor",
     "lib-publish": "npm run patch-version && npm publish",
-    "build_cp": "npm run build && sh ./scripts/cp.sh"
+    "build_cp": "npm run build && sh ./scripts/cp.sh",
+    "build_and_publish": "npm run build_cp && npm run lib-publish"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

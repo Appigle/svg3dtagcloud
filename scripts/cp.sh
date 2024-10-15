@@ -9,3 +9,8 @@ echo "-- Copy done!"
 echo "-- Back to parent directory"
 cd ..
 ls -lh ./dist
+
+echo "-- Commit changes"
+git add .
+git commit -am "Update dist files"
+echo "-- Done"
