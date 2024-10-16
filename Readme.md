@@ -69,7 +69,7 @@ Svg3dTagCloud is a lightweight and user-friendly JavaScript library that empower
    </html>
    ```
 
-3. **Create the Tag Cloud:** <a name="configuration"></a>
+3. **Create the Tag Cloud:** <a id="configuration"></a>
 
    ```javascript
    const childrenForText = [
