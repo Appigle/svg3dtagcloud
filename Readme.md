@@ -6,7 +6,8 @@ Svg3dTagCloud is a lightweight and user-friendly JavaScript library that empower
 
 **Demo**
 
-![Demo](https://www.unpkg.com/svg-3d-tag-cloud@0.0.16/dist/svg-3d-tag-cloud.gif)
+![Demo](https://www.unpkg.com/svg-3d-tag-cloud/dist/svg-3d-tag-cloud.gif)
+![Demo](https://www.unpkg.com/svg-3d-tag-cloud/dist/svg-3d-tag-cloud-img.gif)
 
 **Features:**
 
