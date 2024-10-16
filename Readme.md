@@ -39,7 +39,19 @@ Svg3dTagCloud is a lightweight and user-friendly JavaScript library that empower
 
    - `window.SVG3DTagCloud.__VERSION`
 
-1. **Create HTML Structure:**
+1. **ESM Import**
+
+   settings -> [see #3](#configuration)
+
+   ```js
+   import SVG3DTagCloud from 'svg-3d-tag-cloud';
+   // other code
+
+   // settings _> #2
+   new SVG3DTagCloud(document.getElementById('container'), settings).build();
+   ```
+
+2. **Create HTML Structure:**
 
    ```javascript
    <!DOCTYPE html>
@@ -57,10 +69,10 @@ Svg3dTagCloud is a lightweight and user-friendly JavaScript library that empower
    </html>
    ```
 
-2. **Create the Tag Cloud:**
+3. **Create the Tag Cloud:** <a name="configuration"></a>
 
    ```javascript
-   let childrenForText = [
+   const childrenForText = [
      {
        label: 'JavaScript',
        url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -74,7 +86,7 @@ Svg3dTagCloud is a lightweight and user-friendly JavaScript library that empower
      // ... add more tag objects
    ];
 
-   let childrenForImage = [
+   const childrenForImage = [
      {
        image: '/public/logo.svg', // Replace with your image path
        width: '50',
