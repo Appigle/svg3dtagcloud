@@ -61,7 +61,7 @@ const w = [
   animatingSpeed: 0.1,
   animatingRadiusLimit: 1.3
 };
-class E {
+class p {
   constructor(t, i) {
     n(this, "containerEl");
     n(this, "settings");
@@ -135,7 +135,7 @@ class E {
     this.childHolder.forEach((i) => this.setChildPosition(i, t));
   }
   setParams() {
-    var d, u;
+    var m, u;
     const { innerWidth: t, innerHeight: i } = window, { documentElement: o, body: a } = document, {
       width: h,
       height: r,
@@ -144,10 +144,10 @@ class E {
       radiusMin: s = 1,
       isDrawSvgBg: g
     } = this.settings;
-    let e = t || o.clientWidth || a.clientWidth, m = i || o.clientHeight || a.clientHeight;
+    let e = t || o.clientWidth || a.clientWidth, d = i || o.clientHeight || a.clientHeight;
     typeof h == "string" && h.includes("%") ? (e = Math.round(
       this.containerEl.offsetWidth / 100 * parseInt(h)
-    ), m = Math.round(e / 100 * parseInt(r))) : (e = h, m = r), e = Math.min(e, t || 0), m = Math.min(m, i || 0), this.center2D = { x: e / 2, y: m / 2 }, this.speed = { x: c / this.center2D.x, y: c / this.center2D.y }, this.diameter = Math.min(m, e) * (parseInt(`${l}`) / 100), this.diameter = Math.max(this.diameter, 1), this.radius = Math.max(this.diameter / 2, s), this.diameter = this.radius * 2, (d = this.svgEl) == null || d.setAttribute("width", `${e}`), (u = this.svgEl) == null || u.setAttribute("height", `${m}`), g && this.svgBg && (this.svgBg.setAttribute("width", `${e}`), this.svgBg.setAttribute("height", `${m}`)), this.setChildPositions(this.radius * this.radius_factor);
+    ), d = Math.round(e / 100 * parseInt(r))) : (e = h, d = r), e = Math.min(e, t || 0), d = Math.min(d, i || 0), this.center2D = { x: e / 2, y: d / 2 }, this.speed = { x: c / this.center2D.x, y: c / this.center2D.y }, this.diameter = Math.min(d, e) * (parseInt(`${l}`) / 100), this.diameter = Math.max(this.diameter, 1), this.radius = Math.max(this.diameter / 2, s), this.diameter = this.radius * 2, (m = this.svgEl) == null || m.setAttribute("width", `${e}`), (u = this.svgEl) == null || u.setAttribute("height", `${d}`), g && this.svgBg && (this.svgBg.setAttribute("width", `${e}`), this.svgBg.setAttribute("height", `${d}`)), this.setChildPositions(this.radius * this.radius_factor);
   }
   addChild(t, i, o, a, h) {
     var g;
@@ -270,16 +270,16 @@ class E {
     }, this.childHolder.forEach((e) => {
       if (!e.element || !e.vectorPosition || !e.vector2D) return;
       if (this.mouseReact) {
-        const { x: p, y: v, z: y } = e.vectorPosition, x = v * this.position.sy + y * this.position.cy;
-        e.vectorPosition.x = p * this.position.cx + x * this.position.sx, e.vectorPosition.y = v * this.position.cy + y * -this.position.sy, e.vectorPosition.z = p * -this.position.sx + x * this.position.cx;
+        const { x: v, y, z: x } = e.vectorPosition, E = y * this.position.sy + x * this.position.cy;
+        e.vectorPosition.x = v * this.position.cx + E * this.position.sx, e.vectorPosition.y = y * this.position.cy + x * -this.position.sy, e.vectorPosition.z = v * -this.position.sx + E * this.position.cx;
       }
-      const m = h / (h + e.vectorPosition.z);
-      e.vector2D.x = e.vectorPosition.x * m + this.center2D.x, e.vector2D.y = e.vectorPosition.y * m + this.center2D.y, e.diffX && e.diffY && (e.vector2D.x -= e.diffX, e.vector2D.y -= e.diffY), e.element.setAttribute("x", `${e.vector2D.x}`), e.element.setAttribute("y", `${e.vector2D.y}`);
-      let d = this.mouseReact ? (this.radius - e.vectorPosition.z) / this.diameter : parseFloat(e.element.getAttribute("opacity") || "1");
-      d = this.mouseReact ? Math.max(d, i) : e.mouseOver ? d + (o - d) / a : d + (i - d) / a;
+      const d = h / (h + e.vectorPosition.z);
+      e.vector2D.x = e.vectorPosition.x * d + this.center2D.x, e.vector2D.y = e.vectorPosition.y * d + this.center2D.y, e.diffX && e.diffY && (e.vector2D.x -= e.diffX, e.vector2D.y -= e.diffY), e.element.setAttribute("x", `${e.vector2D.x}`), e.element.setAttribute("y", `${e.vector2D.y}`);
+      let m = this.mouseReact ? (this.radius - e.vectorPosition.z) / this.diameter : parseFloat(e.element.getAttribute("opacity") || "1");
+      m = this.mouseReact ? Math.max(m, i) : e.mouseOver ? m + (o - m) / a : m + (i - m) / a;
       const u = 1 - (this.radius_factor - 1) / (r - 1);
-      e.element.setAttribute("opacity", `${d * u}`);
-    }), this.childHolder.sort((e, m) => m.vectorPosition.z - e.vectorPosition.z);
+      e.element.setAttribute("opacity", `${m * u}`);
+    }), this.childHolder.sort((e, d) => d.vectorPosition.z - e.vectorPosition.z);
   }
   animationLoopStart() {
     this.animFrameId = window.requestAnimationFrame(() => {
@@ -329,9 +329,15 @@ class E {
     var t;
     this.animFrameId && window.cancelAnimationFrame(this.animFrameId), window.removeEventListener("resize", this.onScreenResizeHandler), this.svgBg && ((t = this.svgEl) == null || t.removeChild(this.svgBg)), this.svgEl && (this.containerEl.removeChild(this.svgEl), this.svgEl.removeEventListener("mousemove", this.onMouseMoveHandler), this.svgEl = null);
   }
+  static __VERSION() {
+    console.log(
+      "%c [ __VERSION ]-573",
+      "font-size:13px; background:pink; color:#bf2c9f;",
+      "0.0.15_10/16/2024, 12:00:28 AM"
+    );
+  }
 }
-window.SVG3dTagCloud = E;
-window.Svg3dTagCloud = E;
+window && (window.SVG3DTagCloud = p, window.SVG3dTagCloud = p, window.Svg3dTagCloud = p);
 export {
-  E as default
+  p as default
 };

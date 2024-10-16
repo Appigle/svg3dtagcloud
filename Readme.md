@@ -4,6 +4,10 @@
 
 Svg3dTagCloud is a lightweight and user-friendly JavaScript library that empowers you to generate visually appealing 3D tag clouds using SVG (Scalable Vector Graphics). It offers effortless integration into your web projects, delivering an engaging way to present keyword lists or other textual data.
 
+**Demo**
+
+![Demo][./dist/svg-3d-tag-cloud.gif]
+
 **Features:**
 
 - Simple & Effective: Effortlessly create tag clouds through a well-designed API.
@@ -30,6 +34,10 @@ Svg3dTagCloud is a lightweight and user-friendly JavaScript library that empower
    ```
 
 **Usage (HTML + JavaScript):**
+
+0. **Version**
+
+   - `window.SVG3DTagCloud.__VERSION`
 
 1. **Create HTML Structure:**
 

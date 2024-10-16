@@ -568,14 +568,26 @@ class SVG3DTagCloud {
       this.svgEl = null;
     }
   }
+
+  static __VERSION() {
+    console.log(
+      '%c [ __VERSION ]-573',
+      'font-size:13px; background:pink; color:#bf2c9f;',
+      '__VERSION__'
+    );
+  }
 }
 
 export default SVG3DTagCloud;
 
-// @ts-ignore
-window.SVG3dTagCloud = SVG3DTagCloud;
-// @ts-ignore
-window.Svg3dTagCloud = SVG3DTagCloud;
+if (window) {
+  // @ts-ignore
+  window.SVG3DTagCloud = SVG3DTagCloud;
+  // @ts-ignore
+  window.SVG3dTagCloud = SVG3DTagCloud;
+  // @ts-ignore
+  window.Svg3dTagCloud = SVG3DTagCloud;
+}
 
 interface SVG3DTagCloudChild {
   element?: Element;
