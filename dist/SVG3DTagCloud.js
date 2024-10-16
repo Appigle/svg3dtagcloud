@@ -333,7 +333,7 @@ class p {
     console.log(
       "%c [ __VERSION ]-573",
       "font-size:13px; background:pink; color:#bf2c9f;",
-      "v0.0.16_Bt: 10/16/2024, 12:08:34 AM"
+      "v0.0.17_Bt: 10/16/2024, 12:24:18 AM"
     );
   }
 }
